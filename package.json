@@ -1,0 +1,32 @@
+{
+    "name": "product-node-project",
+    "version": "1.0.0",
+    "description": "Product Restful CRUD API for Node.js, Express and MongoDB",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "rest",
+        "api",
+        "mongodb"
+    ],
+    "author": "ramanujadasu",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mongoose": "^5.8.10"
+    },
+    "devDependencies": {
+        "jasmine": "^3.7.0",
+        "jasmine-console-reporter": "^3.1.0",
+        "jasmine-node": "^1.16.0",
+        "jasmine-supertest": "^1.0.0",
+        "nyc": "^15.1.0",
+        "supertest": "^4.0.2"
+    }
+}
