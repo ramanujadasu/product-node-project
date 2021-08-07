@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "098f689a-b485-475c-a18a-53b8985bf1fd",
+		"name": "Product-NodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Products",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"user-agent": true,
+					"host": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuYXp1cmUuY29tIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvZWZmN2Y5ODUtZGM1OC00OTM1LWE5MDYtMDUwNjA5YmU4NWMzLyIsImlhdCI6MTYxMTg0NjUxOCwibmJmIjoxNjExODQ2NTE4LCJleHAiOjE2MTE4NTA0MTgsImFpbyI6IkUyWmdZSWl5L0prcDFpa3hRZmhoczQ3VjBVOWNBQT09IiwiYXBwaWQiOiI0MjIxN2QwNy0wMjI0LTQwNDQtYTY4My0yN2I2MDdmMTRjYWEiLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9lZmY3Zjk4NS1kYzU4LTQ5MzUtYTkwNi0wNTA2MDliZTg1YzMvIiwib2lkIjoiZWFmZjgxNDQtNGRlNi00ZDMxLTg1MGEtOGJhOTE2NTAxZDliIiwicmgiOiIwLkFBQUFoZm4zNzFqY05VbXBCZ1VHQ2I2Rnd3ZDlJVUlrQWtSQXBvTW50Z2Z4VEtwdUFBQS4iLCJzdWIiOiJlYWZmODE0NC00ZGU2LTRkMzEtODUwYS04YmE5MTY1MDFkOWIiLCJ0aWQiOiJlZmY3Zjk4NS1kYzU4LTQ5MzUtYTkwNi0wNTA2MDliZTg1YzMiLCJ1dGkiOiJFRTgyT05ycHRrT0hUajFzR0g4MUFBIiwidmVyIjoiMS4wIiwieG1zX3RjZHQiOjE0MjIyOTYzNTZ9.ZLDplpblp0dtTe0DL0QXmLLZpESEjnMFOf9KLNpHOda2QmpRB5aNi66xN-qI6tsLBFhRI0qjVZXc9e9ZVk9FWww6GRItV5GO24iL2gChBgo5FZTlNX5PEtwpINhDLpP-KkIhVs1_Rqf4yE5KsoAN9HpQOpoBBVOqEMQABzzC9OU5bhnZp2gOwbhiyp6caiaDChUTqo5Cxg6bcjDlmm_ZPtCpRPKmo_MELpJz4486yu5QBucAA9AOP3ibC4KR-VkH7A6TpdQSYzY-4KRAMZomMU3VI56nuR4qoWRNj7ObW4z3_dNXxap1-EaJtIdfX1yw15j7msDCyb2pgw4Zm3Nniw",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"product-a\",\n    \"price\": \"111\",\n    \"country\": \"USD\",\n    \"description\":\"a product\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Tutorials",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuYXp1cmUuY29tIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvZWZmN2Y5ODUtZGM1OC00OTM1LWE5MDYtMDUwNjA5YmU4NWMzLyIsImlhdCI6MTYxMTg0NjUxOCwibmJmIjoxNjExODQ2NTE4LCJleHAiOjE2MTE4NTA0MTgsImFpbyI6IkUyWmdZSWl5L0prcDFpa3hRZmhoczQ3VjBVOWNBQT09IiwiYXBwaWQiOiI0MjIxN2QwNy0wMjI0LTQwNDQtYTY4My0yN2I2MDdmMTRjYWEiLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9lZmY3Zjk4NS1kYzU4LTQ5MzUtYTkwNi0wNTA2MDliZTg1YzMvIiwib2lkIjoiZWFmZjgxNDQtNGRlNi00ZDMxLTg1MGEtOGJhOTE2NTAxZDliIiwicmgiOiIwLkFBQUFoZm4zNzFqY05VbXBCZ1VHQ2I2Rnd3ZDlJVUlrQWtSQXBvTW50Z2Z4VEtwdUFBQS4iLCJzdWIiOiJlYWZmODE0NC00ZGU2LTRkMzEtODUwYS04YmE5MTY1MDFkOWIiLCJ0aWQiOiJlZmY3Zjk4NS1kYzU4LTQ5MzUtYTkwNi0wNTA2MDliZTg1YzMiLCJ1dGkiOiJFRTgyT05ycHRrT0hUajFzR0g4MUFBIiwidmVyIjoiMS4wIiwieG1zX3RjZHQiOjE0MjIyOTYzNTZ9.ZLDplpblp0dtTe0DL0QXmLLZpESEjnMFOf9KLNpHOda2QmpRB5aNi66xN-qI6tsLBFhRI0qjVZXc9e9ZVk9FWww6GRItV5GO24iL2gChBgo5FZTlNX5PEtwpINhDLpP-KkIhVs1_Rqf4yE5KsoAN9HpQOpoBBVOqEMQABzzC9OU5bhnZp2gOwbhiyp6caiaDChUTqo5Cxg6bcjDlmm_ZPtCpRPKmo_MELpJz4486yu5QBucAA9AOP3ibC4KR-VkH7A6TpdQSYzY-4KRAMZomMU3VI56nuR4qoWRNj7ObW4z3_dNXxap1-EaJtIdfX1yw15j7msDCyb2pgw4Zm3Nniw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bucketName\":\"testnew-23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Project API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bucketName\":\"testnew-23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products By ViewCount",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/most-views/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"most-views",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products All- without update view count",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bucketName\":\"testnew-23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products ByID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bucketName\":\"testnew-23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/610d8f94cca792616f6f8390",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"610d8f94cca792616f6f8390"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

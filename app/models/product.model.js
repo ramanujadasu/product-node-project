@@ -6,7 +6,6 @@ module.exports = mongoose => {
         country: String,
         description: String,
         viewCount: Number,
-
       },
       { timestamps: true }
     );

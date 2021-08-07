@@ -11,7 +11,8 @@
         "express",
         "rest",
         "api",
-        "mongodb"
+        "mongodb",
+        "mysql"
     ],
     "author": "ramanujadasu",
     "license": "ISC",

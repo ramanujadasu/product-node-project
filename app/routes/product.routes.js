@@ -9,16 +9,13 @@ module.exports = app => {
     router.post("/", products.create);
 
     // Retrieve most viewed Product
-    router.get("/", products.findAll);
+    router.get("/all", products.findAll);
 
     // Retrieve most viewed Product
     router.get("/most-views", products.findByViewCount);
   
-    // Retrieve a single Product with id
+    // Retrieve a single Product with id, it will increase the view count
     router.get("/:id", products.findOne);
-  
-    // Update a Product with id
-    router.put("/:id", products.update);
   
     // Delete a Product with id
     router.delete("/:id", products.delete);

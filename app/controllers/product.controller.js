@@ -144,21 +144,33 @@ exports.delete = (req, res) => {
 
 // Find all published Products
 exports.findByViewCount = (req, res) => {
-  // let query;
-  // if (req.country != null){
-  //   query = { country: req.country, viewCount: Math.max(req.product.viewCount) };
-  // }else{
-  //   query = { viewCount: Math.max(req.product.viewCount) };
-  // }
+
   const country = req.query.country;
   var condition = country ? { country: country} : {};
+  var listsize = req.query.size;
+  if (listsize == null || listsize == undefined || listsize == 0) {
+    listsize = 5;
+  }
   Product.find(condition)
     .then(data => {
-      console.log(data);
-      // for (Product mv: data){
-      //   Math.max(mv.viewCount);
-      // }
-      res.send(data);
+      console.log("response data"+data);
+      let vclist = [];
+      let responselist = [];
+      
+      for (let mapData of data)
+      {
+        vclist.push(mapData.viewCount);
+      }
+      vclist = vclist.sort().reverse();
+      for (let mapData of data)
+      {
+        if (vclist.includes(mapData.viewCount)){
+          responselist.push(mapData);
+        }
+      }
+      let result = responselist.slice(0,listsize)
+      console.log("response list"+result);
+      res.send(result);
     })
     .catch(err => {
       res.status(500).send({
