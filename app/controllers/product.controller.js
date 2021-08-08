@@ -140,7 +140,27 @@ exports.delete = (req, res) => {
       });
     });
 };
+var jsondata;
+const requests = require("requests");
+const userAction = async () => {
+  const response = await fetch('http://api.currencylayer.com/live?access_key=e678fefb25515dc9f196923b44fbd817&currencies=USD,CAD,EUR,GBP&format=1');
+  jsondata = await response.json(); //extract JSON from the http response
+  console.log(jsondata);  // do something with myJson
+}
 
+
+let url = "http://api.currencylayer.com/live?access_key=e678fefb25515dc9f196923b44fbd817&currencies=USD,CAD,EUR,GBP&format=1"
+
+var headers = {
+        "cache-control": "no-cache",
+        "x-dreamfactory-api-key": "YOUR_API_KEY"
+}
+
+let response = requests.request("GET", url, headers=headers);
+console.log(response);
+
+print(response.text)
+console.log(userAction);
 
 // Find all published Products
 exports.findByViewCount = (req, res) => {

@@ -12,7 +12,8 @@
         "rest",
         "api",
         "mongodb",
-        "mysql"
+        "mysql",
+        "requests"
     ],
     "author": "ramanujadasu",
     "license": "ISC",
@@ -20,7 +21,8 @@
         "body-parser": "^1.19.0",
         "cors": "^2.8.5",
         "express": "^4.17.1",
-        "mongoose": "^5.8.10"
+        "mongoose": "^5.8.10",
+        "requests": "^0.3.0"
     },
     "devDependencies": {
         "jasmine": "^3.7.0",
